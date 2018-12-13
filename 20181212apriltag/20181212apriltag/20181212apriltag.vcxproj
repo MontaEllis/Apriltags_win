@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1BF145D6-45B6-4B52-A506-F26FBAC1CFB1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My20181212apriltag</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\example\apriltags_demo.cpp" />
+    <ClCompile Include="..\src\Edge.cc" />
+    <ClCompile Include="..\src\FloatImage.cc" />
+    <ClCompile Include="..\src\Gaussian.cc" />
+    <ClCompile Include="..\src\GLine2D.cc" />
+    <ClCompile Include="..\src\GLineSegment2D.cc" />
+    <ClCompile Include="..\src\GrayModel.cc" />
+    <ClCompile Include="..\src\Homography33.cc" />
+    <ClCompile Include="..\src\MathUtil.cc" />
+    <ClCompile Include="..\src\Quad.cc" />
+    <ClCompile Include="..\src\Segment.cc" />
+    <ClCompile Include="..\src\TagDetection.cc" />
+    <ClCompile Include="..\src\TagDetector.cc" />
+    <ClCompile Include="..\src\TagFamily.cc" />
+    <ClCompile Include="..\src\UnionFindSimple.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AprilTags\Edge.h" />
+    <ClInclude Include="..\AprilTags\FloatImage.h" />
+    <ClInclude Include="..\AprilTags\Gaussian.h" />
+    <ClInclude Include="..\AprilTags\GLine2D.h" />
+    <ClInclude Include="..\AprilTags\GLineSegment2D.h" />
+    <ClInclude Include="..\AprilTags\GrayModel.h" />
+    <ClInclude Include="..\AprilTags\Gridder.h" />
+    <ClInclude Include="..\AprilTags\Homography33.h" />
+    <ClInclude Include="..\AprilTags\MathUtil.h" />
+    <ClInclude Include="..\AprilTags\pch.h" />
+    <ClInclude Include="..\AprilTags\Quad.h" />
+    <ClInclude Include="..\AprilTags\Segment.h" />
+    <ClInclude Include="..\AprilTags\Tag16h5.h" />
+    <ClInclude Include="..\AprilTags\Tag16h5_other.h" />
+    <ClInclude Include="..\AprilTags\Tag25h7.h" />
+    <ClInclude Include="..\AprilTags\Tag25h9.h" />
+    <ClInclude Include="..\AprilTags\Tag36h11.h" />
+    <ClInclude Include="..\AprilTags\Tag36h11_other.h" />
+    <ClInclude Include="..\AprilTags\Tag36h9.h" />
+    <ClInclude Include="..\AprilTags\TagDetection.h" />
+    <ClInclude Include="..\AprilTags\TagDetector.h" />
+    <ClInclude Include="..\AprilTags\TagFamily.h" />
+    <ClInclude Include="..\AprilTags\UnionFindSimple.h" />
+    <ClInclude Include="..\AprilTags\XYWeight.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
